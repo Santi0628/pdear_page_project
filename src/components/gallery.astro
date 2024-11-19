@@ -1,0 +1,22 @@
+---
+import Lightbox from './lightbox.astro'
+import imageFiles  from '../images_urls.json'
+
+export interface Props {
+  folder: string
+}
+
+---
+<div
+  class='block w-full columns-1 gap-2 sm:columns-2 lg:columns-3 lg:gap-2'
+  itemscope
+>
+  {
+    imageFiles.map((imageFile, idx) => Object.keys(imageFile['images']).length > 0 && <Lightbox 
+        id={String(idx)} 
+        images={imageFile['images']}
+        label={imageFile['label']}
+      />
+  )
+  }
+</div>

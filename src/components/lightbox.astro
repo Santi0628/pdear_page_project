@@ -1,0 +1,87 @@
+---
+import 'photoswipe/style.css'
+import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css'
+import { Image } from 'astro:assets'
+
+export interface Props {
+  images: string[],
+  id: string | number,
+  label: string,
+}
+
+const { id, images, label } = Astro.props
+
+const imagetitles = images.map((image) => label)
+const image = images[0]
+const images_json = JSON.stringify(images)
+---
+
+<lightbox-inner data-id=`btn-open-${id}` data-images={images_json} class="block mb-5">
+      <figure
+        itemscope
+        itemtype='http://schema.org/ImageObject'
+        class='relative mx-auto'
+      >
+        <button
+          class="w-full h-full flex relative align-center"
+          itemprop='contentUrl'
+          data-pswp-width={300}
+          data-pswp-height={300}
+          id=`btn-open-${id}`
+        >
+          <Image
+            src={image}
+            alt={imagetitles[0]}
+            format='webp'
+            class='rounded mx-auto size-[300px] object-cover shadow-lg shadow-black/80'
+            width={300}
+            height={300}
+          />
+        </button>
+        <figcaption itemprop='caption description' class='rounded text-white text-center font-bold p-2 absolute bottom-0 bg-green-400/85 w-full lg:w-5/6 left-1/2 transform -translate-x-1/2'>
+         <span>{label}</span>
+        </figcaption>
+      </figure>    
+
+</lightbox-inner>
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+  const getMeta = (url, cb) => {
+    const img = new Image();
+    img.onload = () => cb(null, img);
+    img.onerror = (err) => cb(err);
+    img.src = url;
+  };
+
+  class LightboxInner extends HTMLElement {
+    constructor() {
+      super()
+
+      let dataSource : Record<string, string>[] = []
+
+      JSON.parse(this.dataset.images).forEach( (url_img: string, idx: number) => (
+        getMeta(url_img, (err, img) => (dataSource.push({
+          src: img.src,
+          width: img.naturalWidth,
+          height: img.naturalHeight
+        })))
+      ))
+
+      const id = this.dataset.id
+
+      const lightbox = new PhotoSwipeLightbox({
+        dataSource,
+        pswpModule: () => import('photoswipe'),
+      });
+     
+      lightbox.init()
+      document.querySelector(`#${id}`).onclick = () => {
+        lightbox.loadAndOpen(0); // defines start slide index
+      };
+    }
+  }
+
+  customElements.define('lightbox-inner', LightboxInner)
+
+</script>

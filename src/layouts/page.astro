@@ -1,0 +1,35 @@
+---
+import type { Frontmatter } from '../config'
+import Base from '../layouts/base.astro'
+
+export interface Props {
+  frontmatter: {
+    layout: string
+    title: string
+    description: string
+    publishDate: string
+    coverSVG: string
+    socialImage: string
+  }
+}
+
+const { frontmatter } = Astro.props
+
+const fm: Frontmatter = {
+  title: frontmatter.title,
+  description: frontmatter.description,
+  publishDate: new Date(frontmatter.publishDate),
+}
+---
+
+<Base frontmatter={fm}>
+  <main class='dark:bg-gray-900'>
+    <article class='post'>
+      <section
+        class='prose prose-purple mx-auto my-8 max-w-screen-lg px-4 dark:prose-invert lg:prose-xl lg:px-0'
+      >
+        <slot />
+      </section>
+    </article>
+  </main>
+</Base>

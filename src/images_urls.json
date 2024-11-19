@@ -1,0 +1,81 @@
+[
+    {
+        "pathname": "RESGUARDOINGDIGENAKARABIDRUA",
+        "label": "RESGUARDO INDÍGENA KARABIDRUA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DSC05859-scaled.jpg",
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DSC08085-scaled.jpg"
+        ]
+    },
+    {
+        "pathname": "BALBOA",
+        "label": "BALBOA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/BALBOA.jpeg"
+        ]
+    },
+    {
+        "pathname": "DOSQUEBRADAS",
+        "label": "DOSQUEBRADAS",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DOSQUEBRADAS.jpeg"
+        ]
+    },
+    {
+        "pathname": "FOROEDUCACIONAMBIENTAL",
+        "label": "FORO DE EDUCACIÓN AMBIENTAL",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/2.jpeg"
+        ]
+    },
+    {
+        "pathname": "EVENTORECONOCIMIENTO",
+        "label": "EVENTO DE RECONOCIMIENTO",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DSC09548-scaled.jpg",
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/DSC09611-scaled.jpg"
+        ]
+    },
+    {
+        "pathname": "GUATICA",
+        "label": "GUÁTICA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/GUATICA.jpeg"
+        ]
+    },
+    {
+        "pathname": "APIA",
+        "label": "APÍA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/APIA.jpeg"
+        ]
+    },
+    {
+        "pathname": "LACELIA",
+        "label": "LA CELIA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/LA-CELIA.jpeg"
+        ]
+    },
+    {
+        "pathname": "LAVIRGINIA",
+        "label": "LA VIRGINIA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/LA-VIRGINIA.jpeg"
+        ]
+    },
+    {
+        "pathname": "PEREIRA",
+        "label": "PEREIRA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/PEREIRA.jpeg"
+        ]
+    },
+    {
+        "pathname": "SANTAROSA",
+        "label": "SANTAROSA",
+        "images": [
+            "https://blog.utp.edu.co/educacion-ambiental-de-risaralda/files/2023/12/SANTA-ROSA.jpeg"
+        ]
+    }
+]
